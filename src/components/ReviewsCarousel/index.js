@@ -23,11 +23,11 @@ class ReviewsCarousel extends Component {
     const {imgUrl, username, companyName, description} = review
 
     return (
-      <div>
-        <img src={imgUrl} alt={username} />
-        <p>{username}</p>
+      <div className="carousel-each-item">
+        <img className="image" src={imgUrl} alt={username} />
+        <p className="heading">{username}</p>
         <p>{companyName}</p>
-        <p>{description}</p>
+        <p className="description-paragraph">{description}</p>
       </div>
     )
   }
@@ -48,9 +48,9 @@ class ReviewsCarousel extends Component {
     const currentReviewDetails = reviewsList[activeReviewIndex]
 
     return (
-      <div>
-        <h1>Reviews</h1>
-        <div>
+      <div className="carousel-container">
+        <h1 className="heading">Reviews</h1>
+        <div className="carousel-item">
           <button
             type="button"
             onClick={this.onClickLeftArrow}
